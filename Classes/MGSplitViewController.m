@@ -148,8 +148,6 @@
 - (void)dealloc
 {
 	_delegate = nil;
-	[self.masterViewController release];
-	[self.detailViewController release];
 	[self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 	[_viewControllers release];
 	[_barButtonItem release];
